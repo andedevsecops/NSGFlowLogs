@@ -1,2 +1,0 @@
-# NSGFlowLogs
-NSGFlowLogs
