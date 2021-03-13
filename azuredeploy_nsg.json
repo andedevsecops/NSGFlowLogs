@@ -235,7 +235,7 @@
             },
             {
               "name": "WEBSITE_RUN_FROM_PACKAGE",
-              "value": "https://github.com/andedevsecops/NSGFlowLogs/blob/main/NSGFlowLogs.zip"
+              "value": "https://github.com/andedevsecops/NSGFlowLogs/blob/main/NSGFlowLogs.zip?raw=true"
             },
             {
               "name": "blobContainerName",
