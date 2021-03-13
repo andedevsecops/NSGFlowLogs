@@ -44,15 +44,7 @@
     "appServicePlanCapacity": {
       "type": "int",
       "defaultValue": 2
-    },
-    "githubRepoURL": {
-      "type": "string",
-      "defaultValue": "https://github.com/chinguyen1/NSGconnector.git"
-    },
-    "githubRepoBranch": {
-      "type": "string",
-      "defaultValue": "master"
-    },
+    },    
     "nsgSourceDataConnection": {
       "type": "string",
       "metadata": {
@@ -123,15 +115,13 @@
       }
     },
     "workspaceId": {
-      "type": "string",
-      "defaultValue": "",
+      "type": "string",      
       "metadata": {
         "description": "workspace Id for log analytics."
       }
     },
     "sharedKey": {
-      "type": "string",
-      "defaultValue": "",
+      "type": "string",      
       "metadata": {
         "description": "shared key for log analytics."
       }
@@ -245,7 +235,7 @@
             },
             {
               "name": "WEBSITE_RUN_FROM_PACKAGE",
-              "value": "[toLower(variables('functionAppName'))]"
+              "value": "https://github.com/andedevsecops/NSGFlowLogs/blob/main/NSGFlowLogs.zip"
             },
             {
               "name": "blobContainerName",
@@ -301,22 +291,7 @@
             }
           ]
         }
-      },
-      "resources": [
-        {
-          "apiVersion": "2018-11-01",
-          "name": "web",
-          "type": "sourcecontrols",
-          "dependsOn": [
-            "[resourceId('Microsoft.Web/Sites', variables('functionAppName'))]"
-          ],
-          "properties": {
-            "RepoUrl": "[parameters('githubRepoURL')]",
-            "branch": "[parameters('githubRepoBranch')]",
-            "IsManualIntegration": true
-          }
-        }
-      ]
+      }
     }
   ]
 }
